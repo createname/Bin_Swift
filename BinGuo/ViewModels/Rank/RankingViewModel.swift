@@ -15,24 +15,24 @@ class RankingViewModel: NSObject {
     private let bag = DisposeBag()
     
     func requestData() {
-        apiProvider.request(.rankingListApi) { (result) in
-            switch result {
-            case let .success(response):
-                do {
-                    
-                    
-                    let json = (try JSONSerialization.jsonObject(with: response.data, options: .allowFragments) as? NSDictionary)
-                    print("dic======\(json ?? [:])===\(json?.value(forKey: "Message") ?? "")")
-                    
-                    
-                } catch {
-                    
-                }
-            case .failure(let error):
-                print(error)
-                
-            }
-        }
+//        apiProvider.request(.rankingListApi) { (result) in
+//            switch result {
+//            case let .success(response):
+//                do {
+//                    
+//                    
+//                    let json = (try JSONSerialization.jsonObject(with: response.data, options: .allowFragments) as? NSDictionary)
+//                    print("dic======\(json ?? [:])===\(json?.value(forKey: "Message") ?? "")")
+//                    
+//                    
+//                } catch {
+//                    
+//                }
+//            case .failure(let error):
+//                print(error)
+//                
+//            }
+//        }
         
         let api = apiProvider.rx.request(.rankingListApi).map(RankModel.self, atKeyPath: nil, using: JSONDecoder(), failsOnEmptyData: false).asObservable()
         api.subscribe(onNext: {[weak self] (rankModel) in
