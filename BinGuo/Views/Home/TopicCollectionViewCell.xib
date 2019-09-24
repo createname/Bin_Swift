@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TopicCollectionViewCell" customModule="BinGuo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="184" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guoguo_man" translatesAutoresizingMaskIntoConstraints="NO" id="yqe-Zs-OkF">
+                        <rect key="frame" x="0.0" y="0.0" width="184" height="80"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-ys-hbH">
+                        <rect key="frame" x="73" y="21" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51m-TO-5o1">
+                        <rect key="frame" x="75.5" y="44" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="51m-TO-5o1" firstAttribute="centerX" secondItem="yqe-Zs-OkF" secondAttribute="centerX" id="88P-x7-VrG"/>
+                <constraint firstItem="cx5-ys-hbH" firstAttribute="centerY" secondItem="yqe-Zs-OkF" secondAttribute="centerY" constant="-10" id="BfX-Ii-ur1"/>
+                <constraint firstAttribute="trailing" secondItem="yqe-Zs-OkF" secondAttribute="trailing" id="DBd-Bo-WMi"/>
+                <constraint firstItem="51m-TO-5o1" firstAttribute="top" secondItem="cx5-ys-hbH" secondAttribute="bottom" constant="5" id="Iir-eg-cOy"/>
+                <constraint firstAttribute="bottom" secondItem="yqe-Zs-OkF" secondAttribute="bottom" id="Ri7-db-aKm"/>
+                <constraint firstItem="yqe-Zs-OkF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nSH-Sy-jdg"/>
+                <constraint firstItem="yqe-Zs-OkF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="p4W-5f-h1D"/>
+                <constraint firstItem="cx5-ys-hbH" firstAttribute="centerX" secondItem="yqe-Zs-OkF" secondAttribute="centerX" id="qfs-Pg-JK3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="184" height="80"/>
+            <connections>
+                <outlet property="bottomLab" destination="51m-TO-5o1" id="JQp-sE-bqB"/>
+                <outlet property="imgView" destination="yqe-Zs-OkF" id="vyU-RC-iPk"/>
+                <outlet property="topLab" destination="cx5-ys-hbH" id="zmu-lH-BNV"/>
+            </connections>
+            <point key="canvasLocation" x="234.78260869565219" y="100.44642857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="guoguo_man" width="375" height="250"/>
+    </resources>
+</document>

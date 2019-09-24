@@ -1,0 +1,6 @@
+framework module Pods_BinGuo {
+  umbrella header "Pods-BinGuo-umbrella.h"
+
+  export *
+  module * { export * }
+}
